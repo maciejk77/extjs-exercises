@@ -19,7 +19,13 @@
 
       var myContainer = Ext.create('Ext.container.Container', {
          items: [myComp1,myComp2,myComp3],
-         layout: 'vbox'
+         layout: 'anchor',
+         items:[{
+            height: 150,
+            anchor: '50%',
+            title: 'Panel 1',
+            html: 'Positioned at x:50, y:50'
+         }]
       });
 
 
