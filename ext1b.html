@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/extjs/6.0.0/classic/theme-classic/resources/theme-classic-all.css" rel="stylesheet" />
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/extjs/6.0.0/ext-all.js"></script>
+      <script type="text/javascript">
+
+      // ---- This is simplified with code below ----
+      // var sessionsPanel = Ext.create('Ext.Panel', {
+      //    html: '<b>Sessions Panel</b>',
+      //    flex: 2
+      // });
+
+      // ---- This sessionsPanel can be further simplified, moved to sessionsPanel array directy ----
+      // var sessionsPanel = {
+      //    xtype: 'panel',
+      //    html: '<b>Sessions Panel</b>',
+      //    flex: 2 
+      // }
+
+      Ext.application({
+         name: 'MyApp',
+         launch: function() {
+            Ext.create('Ext.container.Viewport', {
+               layout: {
+                  type: 'hbox',
+                  align: 'stretch'
+               },
+               // items: [sessionsPanel]
+               items: [
+                  {
+                     xtype: 'panel',
+                     html: '<b>Sessions Panel</b>',
+                     flex: 2 
+                  }
+               ]
+            });
+         }
+      });
+
+      </script>
+   </head>
+   <body>
+      <div id="myDivId"></div>
+   </body>
+</html>
