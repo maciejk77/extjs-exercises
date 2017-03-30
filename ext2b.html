@@ -34,25 +34,23 @@
          launch: function() {
             Ext.create('Ext.container.Viewport', {
                layout: {
-                type: 'hbox',
-                align: 'stretch'
+                type: 'border',
+                // align: 'stretch'
                },
                items: [
                 {   
+                    region: 'west',
                     xtype: 'panel',
                     layout: {
                       type: 'vbox',
                       align: 'stretch'
                     },
+                    flex: 1,
+                    split: true,
                     items: [
                       {
-                        xtype: 'panel',
                         html: '<b>Sesssions Panel</b>',
                         flex: 2
-                      },
-                      {
-                        xtype: 'splitter',
-                        width: 1
                       },
                       {
                         xtype: 'panel',
@@ -62,12 +60,14 @@
                     ]    
                 }, 
                 {
-                  xtype: 'splitter'
-                },
-                {
+                    region: 'center',
                     xtype: 'panel',
                     html: '<b>Details Panel</b>',
-                    flex: 3
+                    flex: 3,
+                    title: 'Details Panel',
+                    collapsible: true,
+                    collapsed: true,
+                    collapsedDirection: 'right'
                 }
                ]
             });
